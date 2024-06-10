@@ -106,6 +106,7 @@ window.onload = () => {
         & > .backdrop {
             opacity: 1;
         }
+
         & > .main {
             transform: translateX(0);
         }
