@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	...
+    ...
 </head>
 <body>
-	...
-	<!--@import(/layout/cart-layer.html)-->
+    ...
+    <!--@import(/layout/cart-layer.html)-->
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 </body>
 </html>
@@ -18,15 +18,15 @@
 
 `/layout/basic/header.html`
 ```html
-	<a
-		href="/order/basket.html"
-		module="Layout_orderBasketcount"
-		hx-get="/order/cart-layer.html"
-		hx-target="#cart-layer .main"
-		hx-trigger="click"
-	>
-		<!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span>
-	</a>
+<a
+    href="/order/basket.html"
+    module="Layout_orderBasketcount"
+    hx-get="/order/cart-layer.html"
+    hx-target="#cart-layer .main"
+    hx-trigger="click"
+>
+    <!--@import(/svg/icon-cart.html)--><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span>
+</a>
 ```
 
 ---
@@ -35,30 +35,30 @@
 
 ```html
 <script>
-    window.onload = () => {
-        const cartLayer = document.getElementById('cart-layer')
+window.onload = () => {
+    const cartLayer = document.getElementById('cart-layer')
 
-        if (!cartLayer) {
-            return
-        }
-
-        const open = () => {
-                cartLayer.classList.add('opening')
-            	setTimeout(() => {
-                	cartLayer.classList.add('opened')
-        		})
-        }
-
-        const close = () => {
-                cartLayer.classList.remove('opened')
-            	setTimeout(() => {
-                	cartLayer.classList.remove('opening')
-        		}, 200)
-        }
-
-        document.querySelector('a[href="/order/basket.html"]')?.addEventListener('click', open)
-        cartLayer.querySelector('& > .backdrop')?.addEventListener('click', close)
+    if (!cartLayer) {
+        return
     }
+
+    const open = () => {
+        cartLayer.classList.add('opening')
+            setTimeout(() => {
+                cartLayer.classList.add('opened')
+        })
+    }
+
+    const close = () => {
+        cartLayer.classList.remove('opened')
+            setTimeout(() => {
+                cartLayer.classList.remove('opening')
+            }, 200)
+    }
+
+    document.querySelector('a[href="/order/basket.html"]')?.addEventListener('click', open)
+    cartLayer.querySelector('& > .backdrop')?.addEventListener('click', close)
+}
 </script>
 
 <div id="cart-layer">
@@ -128,6 +128,6 @@
 
 ```html
 <div module="Order_BasketPackage" class="section">
-	...
+    ...
 </div>
 ```
