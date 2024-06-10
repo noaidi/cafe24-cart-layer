@@ -110,6 +110,7 @@ window.onload = () => {
         & > .main {
             transform: translateX(0);
         }
+    }
 }
 </style>
 ```
