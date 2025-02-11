@@ -21,7 +21,7 @@
 <a
     href="/order/basket.html"
     module="Layout_orderBasketcount"
-    hx-get="/order/cart-layer.html"
+    hx-get="/order/basket-layer.html"
     hx-target="#cart-layer .main"
     hx-trigger="click"
 >
@@ -126,7 +126,7 @@ window.onload = () => {
 
 ---
 
-`/skin-base/order/basket.html`의 `<div module="Order_BasketPackage" />` 부분만 `/skin-base/order/cart-layer.html`에 저장
+`/skin-base/order/basket.html`의 `<div module="Order_BasketPackage" />` 부분만 `/skin-base/order/basket-layer.html`에 저장
 
 ```html
 <div module="Order_BasketPackage" class="section">
