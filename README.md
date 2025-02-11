@@ -56,7 +56,9 @@ window.onload = () => {
             }, 200)
     }
 
-    document.querySelector('a[href="/order/basket.html"]')?.addEventListener('click', open)
+    document.querySelector('a.cart').forEach(a => {
+        a.addEventListener('click', open)
+    })
     cartLayer.querySelector('& > .backdrop')?.addEventListener('click', close)
 }
 </script>
